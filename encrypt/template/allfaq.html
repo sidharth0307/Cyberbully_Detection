@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<div class="container-fluid bg-dark text-light shadow pt-5 pb-5" style="background-image:url({%static 'images/b4.jpg' %}); background-size:contain;">
+	<div data-aos="fade-right" class="row" align="left">
+		<div class="col-md-6">
+			<form method="POST" action="">
+														{% csrf_token %}
+				<label for="formGroupExampleInput" class="form-label ms-5 " style="font-family:monospace;">enter a keyword</label>
+					<input type="text" class="form-control border-0 border-bottom a1 text-white"style="background:transparent;" id="formGroupExampleInput" placeholder="" name='se'>
+				<button type="submit" class="btn btn-warning mt-3 ms-5">search</button>
+
+			</form>
+		</div>
+</div>
+	<div data-aos="zoom-in-up" class="row pb-5" align="center">
+  <i class="icofont-ui-chat icofont-10x text-warning"></i>
+  <h1 style="font-family:monospace; font-size:60px">FAQs</h1>
+</div>
+<div class="container">
+	<div class="row">
+	{% for i in data %}
+
+<div data-aos="zoom-out" class="row  shadow p-5 mt-5" style="background:rgba(0, 0, 0, .50);">
+<details>
+  <summary class="text-warning" style="font-family: monospace; font-size: 30px" > {{i.question}}</summary>
+  <p class="text-white">{{i.answer}}</p>
+</details>
+
+	</div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+{% endblock %}

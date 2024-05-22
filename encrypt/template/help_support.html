@@ -1,0 +1,52 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+<div class="container-fluid">
+		<div class="container">
+			<div data-aos="flip-right" class="row mt-5">
+				<div class="col-md-2"></div>
+				<div class="col-md-8" align="center"> 
+				<h1 class="text-warning" style="font-family:monospace; font-size:60px">HELP & SUPPORT</h1>
+				<form method="POST" action="">
+                              {% csrf_token %}
+                     <div class="input-group mb-3 mt-3">
+					  <div class="input-group-prepend">
+					  	
+					    <span class="input-group-text text-warning" style="background:black;" id="basic-addon1">UserName</span>
+					  </div>
+					  <textarea class="form-control text-warning" style="background:transparent;" aria-label="With textarea" name="un" required></textarea>
+					</div>
+					<div class="input-group mb-3 mt-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text text-warning" style="background:black;" id="basic-addon1">TITLE</span>
+					  </div>
+					  <textarea class="form-control text-warning" style="background:transparent;" aria-label="With textarea" name="tl" required></textarea>
+					</div>
+					<div class="input-group">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text text-warning" style="background:black;">MESSAGE</span>
+					  </div>
+					  <textarea class="form-control text-warning" style="background:transparent;" aria-label="With textarea" name="msg" required></textarea>
+					</div>
+					<button type="submit" class="btn btn-warning mt-4">Submit</button>
+					</div>
+			</form>
+				<div class="col-md-2"></div>
+				
+			</div>
+			 
+		</div>
+		
+	</div>
+
+	{% if ms %}
+	<script type="text/javascript">
+		alert('your message is submitted')
+	</script>
+	{% endif %}
+</body>
+
+
+
+	{% endblock %}

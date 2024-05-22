@@ -1,0 +1,43 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+<style type="text/css">
+h2{ writing-mode:vertical-lr;} 
+</style>
+
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+<div class="container-fluid">
+  <div class="container me-5 p-5">
+
+		<div class="row"style="background: linear-gradient( to bottom, #000000 56%, #ffcc00 100%); border-radius: 20px;">
+
+			<div class="col-md-7" align="right">
+				<div class="row ms-4">
+				<form method="POST" action="">
+		             {% csrf_token %}
+					<div data-aos="fade-left" class="form-group pt-5">
+					    <label for="exampleFormControlTextarea1" class="text-warning" style="font-family:monospace;">Input textarea</label>
+					    <textarea class="form-control text-warning" id="exampleFormControlTextarea1" rows="15" name="di" style="background:transparent;"></textarea>
+					    <button class="btn btn-warning mt-3 mb-4" type="submit">Speech</button>
+					  </div>
+				</form>
+			</div>
+		</div>
+
+			<div data-aos="fade-right" class="col-md-3  pt-5 " align="right" >
+				<img src={%static "images/f1.jpg" %} width="100%" height="90%" style="border-radius: 20px;" class="me-3">
+			</div>
+			<div class="col-md-1 pt-5 mt-3 me-3" align="left">	
+				<h2 class=" text-warning" style="font-family:monospace; font-size:40px">Text-To-Speech</h2>
+			</div>
+			<div class="col-md-1"></div>	
+			
+		</div>	
+	</div>
+</div>
+</body>
+
+
+
+
+{% endblock %}

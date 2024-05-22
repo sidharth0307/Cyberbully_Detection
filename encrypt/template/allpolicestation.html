@@ -1,0 +1,60 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container text-white pt-5 pb-5" style="background-image:url({%static 'images/b4.jpg' %}); background-size:contain;">
+	<div class="row pb-5" align="center">
+		<div class="col-md-3"></div>
+		<div data-aos="fade-down" class="col-md-6 mb-5">
+		<a type="submit" class="btn btn-warning p-3" href="https://cybercrime.gov.in/Webform/Accept.aspx">Visit National Cyber Crime Reporting Portal</a>
+	</div>
+		<div class="col-md-3"></div>
+  <i class="icofont-cop icofont-10x text-warning"></i>
+  <h1 style="font-family:monospace; font-size:60px">Police Stations</h1>
+</div>
+<div class="container">
+	
+		{% for i in data %}
+<div class="row  shadow p-5 mt-5" style="background:rgba(0, 0, 0, .50);">
+<div class="col-md-2">
+	{%  if i.image %}
+		<img src="{{i.image.url}}" class="pt-1 pb-0" style=" height: 200px; width: 100%; border-radius:10px">
+		{% endif %}
+</div>
+<div data-aos="fade-left" class="col-md-10">
+	<div  class="row">
+		<div   class="col-md-1 pt-2" align="right">
+		<i class="icofont-ui-head-phone icofont-3x text-warning"></i></div>
+		<div class="col-md-11">
+		<h1 class="card-title text-warning" style="font-family:monospace;">{{i.name}}</h1><hr/></div>
+	</div>
+   <div class="row">
+		<div class="col-md-1" align="right">
+		<i class="icofont-telephone icofont-2x"></i></div>
+		<div class="col-md-11">
+		<h5 class="card-title text-white">{{i.phone_number}}</h5></div>
+	</div>
+    <div class="row">
+		<div class="col-md-1" align="right">
+		<i class="icofont-email icofont-2x"></i></div>
+		<div class="col-md-11">
+		<h5 class="card-title text-white">{{i.email}}</h5></div>
+	</div>
+   <div class="row">
+		<div class="col-md-1 " align="right">
+		<i class="icofont-university icofont-2x"></i></div>
+		<div class="col-md-11">
+		<h5 class="card-title text-white">{{i.address}}</h5></div>
+	</div>
+	
+</div>
+</div>
+		{% endfor %}
+			
+		</div>
+	</div>
+
+
+
+
+{% endblock %}

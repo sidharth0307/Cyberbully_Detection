@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+	<style type="text/css">
+		.a1::placeholder{color:white}
+		.a1{color:white}
+    .a1:hover{color:yellow; !important;}
+
+		img{border-radius: 20px}
+
+		h3{font-family:monospace;
+ 	 		font-size:60px;}
+	</style>
+</head>
+<body>
+	<div   class="container-fluid"style="background-image:url({%static 'images/b3.jpg' %}) ">
+	
+			<div  data-aos="zoom-out-right" class="row">
+				<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<div class="row p-5">
+						<div class="col md-6 bg-black p-3">
+							<img src={%static "images/photo.jpg" %} width="100%" height="100%">
+						</div>
+						<div class="col md-6" style="background: rgba(0, 0, 0, .40);">
+							<div class="row pt-3 pb-5"></div>
+							<form method="POST" action="{% url 'registerform1' %}">
+								{% csrf_token %}
+								<h3 class="text-warning">CONNECT WITH US </h3>
+								<p class="text-white">{{rest}}</p>
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label text-warning">FULL NAME</label>
+							    <input type="name" class="form-control text-warning" style="background:black;" id="exampleInputName1" value="{{name}}" aria-describedby="name" name="fn" required>
+							    
+							  </div>
+							  <div class="mb-3">
+							    <label for="exampleInputEmail1" class="form-label text-warning">ENTER EMAIL ADDRESS</label>
+							    <input type="email" class="form-control text-warning" style="background:black;" id="exampleInputEmail1" value="{{email}}" name="em" required>
+							  </div>
+							
+				
+							  <div class="mb-3">
+							    <label for="exampleInputPassword1" class="form-label text-warning">PASSWORD</label>
+							    <input type="password" value="{{password}}" class="form-control text-warning" style="background:black;" id="exampleInputPassword1" aria-describedby="emailHelp" name="ps"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase and lowercase letter, and be at least 8 characters long" required>
+							    
+							  </div>
+							  <div class="mb-3">
+							    <label for="exampleInputPassword1"  class="form-label text-warning">CONFIRM PASSWORD</label>
+							    <input type="password" class="form-control text-warning" style="background:black;" id="exampleInputPassword1" name="cps"  value="{{password}}"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must contain at least one number, one uppercase and lowercase letter, and be at least 8 characters long" required>
+							  </div>
+							  <label class="form-label text-warning">Enter OTP</label>
+							  <input type="text" required name="fill">
+							  <input type="hidden"  name="org" value={{otp}}>
+							  <button type="submit" class="btn btn-primary" id=b2>REGISTER</button>
+							</form>
+							</div>
+						</div>
+					</div>
+					<div class="col md-2"></div>
+			</div>		
+					
+		</div>
+
+	
+</body>
+	
+{% endblock %}

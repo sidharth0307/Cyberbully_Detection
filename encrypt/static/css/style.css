@@ -1,0 +1,62 @@
+
+
+
+ ul { list-style-type:none;
+ 	font-family:monospace;
+ 	font-size: 20 px;
+ 	padding-left:20px;
+ 	padding-right:20px;}
+
+ #c1{font-family:monospace;
+ 	 font-size:60px;}
+
+ #b2{ background-color:darkblue;}
+
+ #r1{border-radius: 20px;
+ 	  }
+#r2{font-family:monospace;
+ font-size:40px;}
+
+ #basic-addon2{
+ 	border-radius:0px;
+ 	background-color:yellow;
+ }
+div2:{width: 400px;
+		height: 200px;}
+
+#r3{width:1550px;
+	height:500px;
+	padding: 100px;
+	font-family:monospace;
+ font-size:40px;
+	}		
+
+	#r4{
+	font-family:monospace;
+ font-size:40px;
+	}
+
+	#r5{
+	font-family:monospace;
+	}		
+
+#r6{width:1550px;
+	height:500px;
+	padding: 100px;	}
+	
+	#r7{
+	font-family:monospace;
+ font-size:70px;
+	}		
+
+	#r8{
+	font-family:monospace;
+ font-size:20px;
+	}		
+
+#r9{width:1030px;
+	height:380px;
+	padding: 50px;}
+
+
+

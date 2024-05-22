@@ -1,0 +1,367 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+	<style type="text/css">
+		.a1{color:white}
+    .a1:hover{color:yellow; !important;}
+.active{
+      color: yellow;
+      font-weight: bold;
+    }
+	.b1:hover{ transform: skewX(-20deg); }
+	.b1{border-radius:0px}
+
+	.img1:hover{background: red} 
+	.c1:hover{border:2px solid yellow;}
+	hr{
+	border: 2px solid yellow;
+}
+div1 {
+    background: linear-gradient(to bottom, #000000 48%, #ffcc00 100%);}
+    div2 {
+    background: linear-gradient(to top, #000000 48%, #ffcc00 100%);}
+
+h5{font-family: monospace;}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    }																													
+</style>
+</head>
+ <body class="bg-dark">
+	<div class="container-fluid bg-dark text-light shadow pt-5 pb-5" data-aos="fade-up" style="background-image:url({%static 'images/b4.jpg'%}); background-size: fill;">
+		<div class="container">
+			<div class="row pt-5 pb-5">
+				<p class="text-warning">CONQUER SECURITY CHALLENGE</p>
+				<h1 id="r7">Earlier detection,<br> faster response,<br> reduced risk</h1>
+				<div class="row">
+							<div class="col-md-6">
+							<div class="btn-group" role="group" aria-label="Basic example">
+ 								 <a href="{% url 'aboutus' %}" type="button" class="btn btn-warning b1">Learn More</a>
+							</div>
+							</div>
+							<div class="col-md-6"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+						<!--  -->
+						<div class="container">
+							<div class="row pt-5 pb-5 mt-5" align="center" style="background:rgba(0, 0, 0, .50);">
+								
+								<P class="text-white" id="r8" style="font-size: 25px;">In today's digital age, cyberbullying is a prevalent threat. At CyberNyde, we're dedicated to addressing this issue head-on. Our solutions leverage advanced technologies and proactive strategies to swiftly identify and mitigate cyberbullying instances. Let's create safer online spaces together. Reach out to us today to learn more.</P>
+
+						</div>
+
+						</div>		
+
+		<div class="container-fluid  text-light shadow pt-5 " data-aos="fade-right">
+		
+			<div1 class="row pt-5 pb-5">
+			<div class="col-md-6" align="center">
+				<img src={%static "images/272a1466ef294737fe5ef638a1cba514.jpg" %} width=90% height=100%>
+			</div>
+			<div class="col-md-6 shadow"style="background-image:url({%static 'images/de.jpg'%}); background-size: cover;">
+			
+			<div class="row pt-5 pb-5">
+				<p class="text-warning">ABOUT US</p>
+				<h1>Experience to<br> identify and mitigate<br> potential risks</h1>
+				<div class="row">
+					<div class="col-md-6">
+						<p>Cyberbullying is a pervasive issue in today's digital world. With the proliferation of social media platforms and online communication channels, individuals of all ages are vulnerable to harassment, intimidation, and humiliation. </p>
+					</div>
+					<div class="col-md-6">
+						<p>The anonymity and accessibility afforded by the internet have exacerbated this problem, making it crucial for individuals, families, and communities to take proactive measures to address and prevent cyberbullying.</p>
+					</div>
+					<div class="row">
+						<div class="btn-group" role="group" aria-label="Basic example">
+ 								 <a href="{% url 'aboutus' %}" type="button" class="btn btn-warning b1">READ MORE</a>
+								</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div1>
+	</div>
+
+
+
+
+<div style="background-image:url({%static 'images/b4.jpg' %}); background-size: cover;">
+	<div class="container">
+	<div class="row pt-5 pb-5">
+		<div class="col-md-3">
+			
+			<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body pb-5">
+    <h6>01</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Text-to-Speech</h4>
+    <p>converts written text into spoken words, allowing computers or devices to read digital content aloud</p>
+    <a href="{% url 'login' %}" class="btn btn-warning">Try Now</a>
+  </div>
+</div>
+		</div>
+		<div class="col-md-3">
+		<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body">
+    <h6>02</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Speech-to-Text</h4>
+    <p>converts spoken words into written text, enabling computers or devices to transcribe audio input into readable text</p>
+    <a href="{% url 'login' %}" class="btn btn-warning">Try Now</a>
+  </div></div>
+</div>
+		<div class="col-md-3">
+		<div class="card c1"  data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body">
+    <h6>03</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Language Detection</h4>
+    <p>identification of the language in a given text or speech input</p>
+    <a href="{% url 'login' %}" class="btn btn-warning mt-5">Try Now</a>
+  </div></div></div>
+		<div class="col-md-3">
+		<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body">
+    <h6>04</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Language Translation</h4>
+    <p>Language translation is the process of converting text from one language into another</p>
+    <a href="{% url 'login' %}" class="btn btn-warning mt-4">Try Now</a>
+  </div></div></div>
+	</div>
+	<div class="row pt-5 pb-5">
+		<div class="col-md-3">
+			
+			<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body pb-5">
+    <h6>05</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Sentiment Analysis</h4>
+    <p> analyzing text to determine the sentiment or emotion expressed within it, classifying the sentiment as positive, negative, or neutral</p>
+    <a href="{% url 'login' %}" class="btn btn-warning">Try Now</a>
+  </div>
+</div>
+		</div>
+		<div class="col-md-3">
+		<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body">
+    <h6>06</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Linguistic Analysis</h4>
+    <p>examining the structure, patterns, and features of language within text data to extract meaningful insights about language use, grammar, semantics, and syntax</p>
+    <a href="{% url 'login' %}" class="btn btn-warning">Try Now</a>
+  </div></div>
+</div>
+		<div class="col-md-3">
+		<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body">
+    <h6>07</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Word Cloud</h4>
+    <p>representation of text data, where words are displayed in varying sizes according to their frequency of occurrence within the text</p>
+    <a href="{% url 'login' %}" class="btn btn-warning mt-4">Try Now</a>
+  </div></div></div>
+		<div class="col-md-3">
+		<div class="card c1" data-aos="flip-down" style="background:black; color:whitesmoke;">
+  <div class="card-body">
+    <h6>08</h6>
+    <i class="icofont-laptop icofont-2x"></i>
+    <h4>Cyberbylly Detection</h4>
+    <p>identifying and flagging text or speech that contains offensive, inappropriate, or harmful language</p>
+    <a href="{% url 'login' %}" class="btn btn-warning mt-5">Try Now</a>
+  </div></div></div>
+	</div>
+</div>
+</div>
+
+<div class="container-fluid">
+	<div2 class="row pt-5 pb-2">
+		<div class="col-md-7">
+			<video width=100% height=100% controls> <source src={%static "images/5 Ways to Stop Cyberbullying.mp4" %} type="video/mp4"></video>
+		</div>
+		<div class="col-md-5">
+			<h5 class="text-white">Prevalence</h5>
+			<p class="text-white">among students aged 12–17</p>
+			<div class="progress mt-3 mb-5">
+		  <div class="progress-bar bg-warning text-black" role="progressbar" style="width: 36%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">36.5%</div>
+		</div>
+			<h5 class="text-white">Underreporting</h5>
+			<p class="text-white">students who have experienced cyberbullying report it to an adult</p>
+				<div class="progress mt-3 mb-5">
+		  <div class="progress-bar  bg-warning text-black" role="progressbar" style="width: 55.2%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div>
+		</div>
+			<h5 class="text-white">Social Media Usage</h5>
+			<p class="text-white">teenagers have witnessed cyberbullying</p>
+		<div class="progress mt-3 mb-5">
+		  <div class="progress-bar  bg-warning text-black" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">95%</div>
+		</div>
+			<h5 class="text-white">Global Impact</h5>
+			<p class="text-white">parents reported their child had experienced cyberbullying</p>
+		<div class="progress mt-3 mb-5">
+		  <div class="progress-bar  bg-warning text-black" role="progressbar" style="width: 73%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">73%</div>
+		</div>
+	</div>
+	</div2>
+</div>
+
+
+
+
+<div class="video-container">
+    <video autoplay muted loop>
+      <source src={%static "images/dtu.mp4" %} type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+ </div>
+<div class="content">
+
+<div class="container ">
+	<div class="row pt-5 pb-5">
+		<div class="col-md-5">
+		<p class="text-white">OUR VALUES</p>
+			<h1 class="text-white" id="r7">Fostering<br> creativity rapidly and extensively</h1>
+			<div class="btn-group" role="group" aria-label="Basic example">
+ 								 <button type="button" class="btn btn-warning b1">READ MORE</button>
+								</div>
+		</div>
+		<div class="col-md-7">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-6 pt-4 pb-4">
+					<marquee width="60%" direction="up" height="100px" scrollamount="2">
+					<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="Advance Persistent Threat" aria-label="readonly input example" readonly>
+						<p class="text-white">In an APT attack, a threat actor uses the most sophisticated tactics and technologies to penetrate a high-profile network. APTs aim to stay ‘under the radar’ and explore the network while remaining undetected for weeks, months, and even years</p>
+					</marquee>
+				</div>
+				<div class="col-md-6 pt-4 pb-4">
+					<marquee width="95%" direction="down" height="100px" scrollamount="2">
+					<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="General Data Protection Regulation (GDPR)" aria-label="readonly input example" readonly>
+						<p class="text-white">Enacted by the European Union, GDPR aims to protect the privacy and personal data of EU citizens and residents. It imposes strict requirements on data handling, including consent, transparency, security measures, and breach notification. </p>	
+					</marquee>
+				</div>
+				<hr>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 pt-4 pb-4">
+					<marquee width="60%" direction="up" height="100px" scrollamount="2">
+					<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="Subtweeting" aria-label="readonly input example" readonly>
+						<p class="text-white">Subtweeting, short for "subliminal tweeting," is when someone posts a message on social media that refers to a particular person or situation without directly mentioning them by name. It's often used to express thoughts or feelings indirectly, often with the intention of criticizing or commenting on someone without directly engaging with them or causing conflict.</p>
+					</marquee>
+				</div>
+				<div class="col-md-6 pt-4 pb-4">
+					<marquee width="90%" direction="down" height="100px" scrollamount="2">
+					<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="National Cyber Security Policy, 2013" aria-label="readonly input example" readonly>	
+						<p class="text-white">The National Cyber Security Policy of India aims to create a secure and resilient cyberspace ecosystem in the country. It outlines strategic objectives, frameworks, and measures for enhancing cybersecurity, strengthening cyber infrastructure, promoting research and development in cybersecurity, and fostering collaboration between government, industry, academia, and other stakeholders</p>
+					</marquee>
+				</div>
+				<hr>
+			</div>
+				
+			<div class="row">
+				<div class="col-md-6 pt-4 pb-4">
+					<marquee width="60%" direction="up" height="100px" scrollamount="2">
+					<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="Digital Footprint" aria-label="readonly input example" readonly>
+						<p class="text-white">The trail of information and data that individuals leave behind as they use the internet, including social media posts, comments, photos, and online interactions, which can be used for cyberbullying purposes.</p>
+					</marquee>
+				</div>
+				<div class="col-md-6 pt-4 pb-4">
+					<marquee width="90%" direction="down" height="100px" scrollamount="2">
+					<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="POCSO Act, 2012" aria-label="readonly input example" readonly>
+						<p class="text-white">Protection of Children from Sexual Offences (POCSO),While primarily focused on protecting children from sexual offenses, this act also covers offenses committed against children through electronic means, including cyberbullying, cyberstalking, and online harassment. It provides for stringent punishment for perpetrators and safeguards the rights of child victims.</p>	
+
+					</marquee>
+				</div>
+				<hr>
+			</div>	
+			</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+
+
+	<div class="container ">
+	<div class="row pt-5 pb-5">
+		<div class="col-md-6">
+			<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="01" aria-label="readonly input example" readonly>
+			<h4 class="text-white" id="r4">What is cyberbullying?</h4>
+			<p class="text-white">Cyberbullying refers to the use of digital technologies, such as the internet and social media, to harass, intimidate, or harm others. It can involve sending hurtful messages, spreading rumors, sharing private information without consent, or posting derogatory comments or images online.</p>
+			<hr>
+		</div>
+		<div class="col-md-6">
+			<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="04" aria-label="readonly input example" readonly>
+			<h4 class="text-white" id="r4">What are the different forms of cyberbullying?</h4>
+			<p class="text-white">Cyberbullying can take various forms, including cyber harassment, cyberstalking, impersonation, exclusion, flaming (sending hostile messages), doxxing (publishing private information), and sexting (sharing explicit images or messages without consent), among others.</p>
+			<hr>
+		</div>
+	</div>
+
+	<div class="row pt-5 pb-5">
+		<div class="col-md-6">
+			<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="02" aria-label="readonly input example" readonly>
+			<h4 class="text-white" id="r4">How prevalent is cyberbullying?</h4>
+			<p class="text-white">Cyberbullying is unfortunately widespread, with studies indicating that a significant percentage of individuals, especially adolescents and young adults, have experienced cyberbullying at some point in their lives.</p>
+			<hr>
+		</div>
+		<div class="col-md-6">
+			<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="05" aria-label="readonly input example" readonly>
+			<h4 class="text-white" id="r4">What should I do if I'm being cyberbullied?</h4>
+			<p class="text-white">If you're experiencing cyberbullying, it's essential to take steps to protect yourself, such as blocking or unfriending the perpetrator, saving evidence of the harassment, and seeking support from trusted friends, family members, or authorities. Consider reporting the cyberbullying to the platform or website where it's occurring and reaching out to organizations or helplines that specialize in cyberbullying support.</p>
+						<hr>
+		</div>
+	</div>
+
+	<div class="row pt-5 pb-5">
+		<div class="col-md-6">
+			<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="03" aria-label="readonly input example" readonly>
+			<h4 class="text-white" id="r4">How can I prevent cyberbullying?</h4>
+			<p class="text-white">Preventing cyberbullying involves practicing safe online behaviors, such as respecting others' privacy, being mindful of the content you share online, and avoiding engaging in or forwarding hurtful messages or posts. Educating yourself and others about cyberbullying, promoting empathy and respect online, and fostering a supportive digital community can also help prevent cyberbullying.</p>
+			<hr>
+		</div>
+		<div class="col-md-6">
+			<input class="form-control border-0 border-start a1 text-warning"style="background:transparent;" type="text" value="06" aria-label="readonly input example" readonly>
+			<h4 class="text-white" id="r4">What can parents and educators do to address cyberbullying??</h4>
+			<p class="text-white">Parents and educators play a crucial role in preventing and addressing cyberbullying by fostering open communication with children and students, teaching them about digital citizenship and online safety, monitoring their online activities, and intervening promptly if they suspect cyberbullying is occurring. Additionally, creating a supportive and inclusive school or home environment can help prevent cyberbullying.</p>
+			<hr>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

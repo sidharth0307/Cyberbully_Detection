@@ -1,0 +1,36 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+	<div class="container p-5">
+		<div class="row"style="background: linear-gradient( to bottom, #000000 56%, #ffcc00 100%); border-radius:20px">
+
+			<div data-aos="fade-down" class="col-md-7 text-warning mt-5 pt-5" align="center">
+				{% if msg == "neutral" %}
+					<h2 style="font-size:100px">neutral</h2>
+					<p class="text-white">Sentiment Polarity:{{p}}</p>
+				{% elif msg == "Negative" %}
+					<h2 style="font-size:100px">Negative</h2>
+					<p class="text-white">Sentiment Polarity:{{p}}</p>
+				{% elif msg == "positive" %}
+					<h2 style="font-size:100px">positive</h2>
+					<p class="text-white">Sentiment Polarity:{{p}}</p>
+					{% endif %}
+		</div>
+
+			<div data-aos="fade-right" class="col-md-5  pt-5" align="left" >
+				<img src={%static "images/f6.jpg" %} width="50%" height="70%" style="border-radius: 20px;" class="me-3">
+				<h2 class="pt-3 mb-5" style="font-family:monospace; font-size:50px">Sentiment Analysis</h2>
+			</div>
+		</div>
+			
+</div>	
+</body>
+
+
+
+
+{% endblock %}

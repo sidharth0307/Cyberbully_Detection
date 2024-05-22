@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style type="text/css">
+	.card-body:hover{border:2px solid yellow;}
+</style>
+<body style="background-image:url({%static 'images/b3.jpg'%}); background-size: fill;">
+<div class="container">
+	<div class="row pt-5 pb-5">
+		{% for i in k %}
+		<div data-aos="zoom-in" class="col-md-4">
+		<div class="card mt-4 border shadow">
+			<img src="{{i.urlToImage}}" height="200px" width="100px"
+			class="card-img-top">
+		  <div  class="card-body pb-5" style="background:black; color:whitesmoke;">
+		    <h6 class="card-title" title="{{i.title}}" style="color:yellow;">{{i.title|truncatechars:30}}</h6>
+		    <p class="card-text text-white">{{i.content|truncatechars:150}}</p>
+		    <a href="{{i.url}}" class="button text-warning" target="_blank"><b>Click Here </b></a>
+		  </div>
+		</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+
+
+<div class="container-fluid bg-dark text-light shadow pt-5 pb-5" style="background-image:url({%static 'images/b4.jpg' %}); background-size:contain;">
+	<div data-aos="fade-right" class="row" align="left">
+		<div class="col-md-6">
+			<form method="POST" action="">
+														{% csrf_token %}
+				<label for="formGroupExampleInput" class="form-label ms-5 " style="font-family:monospace;">enter a keyword</label>
+					<input type="text" class="form-control border-0 border-bottom a1 text-white"style="background:transparent;" id="formGroupExampleInput" placeholder="" name='se'>
+				<button type="submit" class="btn btn-warning mt-3 ms-5">search</button>
+
+			</form>
+		</div>
+</div>
+	<div data-aos="zoom-in-up" class="row pb-5" align="center">
+
+  <i class="icofont-ui-note icofont-10x text-warning"></i>
+  <h1 style="font-family:monospace; font-size:60px">Terms</h1>
+</div>
+<div class="container">
+
+{% for i in data %}
+<div class="row p-3 mt-5" style="background:rgba(0, 0, 0, .50);">
+	<div class="col-md-3">
+		{%  if i.image %}
+		<img src="{{i.image.url}}" class="pt-1 pb-0" style=" height: 200px; width: 100%; border-radius:10px">
+		{% endif %}
+	</div>
+	<div data-aos="zoom-out" class="col-md-8 text-light" >
+		<h4 style="color: yellow; font-family: monospace;">{{i.title}}</h4><hr>
+		<p class="text-white">{{i.description}}</p>
+			
+
+	</div>
+</div>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}

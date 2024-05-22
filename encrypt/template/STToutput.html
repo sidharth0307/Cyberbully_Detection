@@ -1,0 +1,39 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+
+<style type="text/css">
+h2{ writing-mode:vertical-rl;
+	transform: rotate(180deg);} 
+</style>
+
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+<div class="container-fluid">
+  <div class="container me-5 p-5">
+		<div class="row"style="background: linear-gradient( to bottom, #000000 56%, #ffcc00 100%);border-radius: 20px;">
+				<div class="col-md-1  pt-5"></div>
+				<div class="col-md-1  pt-5 mt-3" align="right" >
+					<h2 class="pt-3 mb-5 text-warning" style="font-family:monospace; font-size:50px">Speech-To-Text</h2>
+				</div>
+			<div data-aos="fade-left" class="col-md-3  pt-5" align="right" >
+				<img src={%static "images/f7.jpg" %} width="90%" height="95%" style="border-radius: 20px;" class="me-3">
+			</div>
+
+			<div class="col-md-7 pt-5" align="left">
+				<div class="row me-4">
+					<div data-aos="fade-right" class="form-group pt-1 pb-5">
+						    <label for="exampleFormControlTextarea10" class="text-warning">Result</label>
+						    <textarea readonly class="form-control text-warning" id="exampleFormControlTextarea10" rows="12"  style="background:transparent;">{{MyText}}</textarea>
+					</div>
+				</div>	
+			</div>
+		</div>	
+
+	</div>
+  </div>
+</body>	
+
+
+
+
+{% endblock %}

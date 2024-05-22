@@ -1,0 +1,33 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+<div class="container-fluid">
+  <div class="container me-5 p-5">
+		<div class="row">
+			<div class="col-md-2"></div>
+
+			<div data-aos="zoom-in-down" class="col-md-8 mt-4 pt-5" align="center" style="background: linear-gradient( to bottom, #000000 56%, #ffcc00 100%); border-radius: 20px;">
+				<img src={%static "images/f7.jpg" %} width="40%" height="80%" style="border-radius: 20px;" class="me-3">
+				<h2 class="pt-4" style="font-family:monospace; font-size:50px">Speech-To-Text</h2>
+				<form method="POST" action="">
+				             {% csrf_token %}
+							
+							    <button class="btn btn-warning" type="submit">Speak</button>
+						</form>
+			</div>
+
+			<div class="col-md-2"></div>
+		</div>	
+
+		</div>
+  	</div>
+</body>	
+
+	
+
+
+
+
+{% endblock %}

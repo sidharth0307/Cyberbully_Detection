@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href= "{%static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+	<style type="text/css">
+	.a1{color:white}
+    .a1:hover{color:yellow; !important;}
+</style>
+</head>
+<body >
+	<div class="container-fluid"style="background-image:url({%static 'images/b3.jpg' %});background-size: cover">
+		<div  data-aos="zoom-out-left" class="container">
+			<div class="row">
+				<div class="col-md-1"></div>
+					<div class="col-md-10 pb-5" align="center">
+						<div class="row p-5">
+							<div class="col md-6 bg-black p-3">
+							<img src={%static "images/photo3.jpg" %} width="100%" height="100%" style="border-radius:20px">
+							</div>
+						<div class="col md-6 p-3" style="background:rgba(0, 0, 0, .40);">
+							<div class="row pt-3 pb-5"></div>
+								<i class="icofont-user-alt-7 icofont-6x text-warning"></i>
+								<h1 style="font-family:monospace;" class="text-warning">Connect: Login Now</h1>
+							<div class="row pt-3 pb-5"></div>	
+							<form method="POST" action="">
+								{% csrf_token %}	
+							  <div class="mb-3">
+							  	<label for="exampleInputemail1" class="form-label text-warning">ENTER EMAIL</label>
+							    <input type="email" class="form-control text-warning" style="background:black;" id="exampleInputemail1" name="em" required>
+							    <div id="emailHelp" class="form-text"></div>
+							  </div>
+							
+							
+							  <div class="mb-3">
+							    <label for="exampleInputpassword1" class="form-label text-warning">PASSWORD</label>
+							    <input type="password" class="form-control text-warning" style="background:black;" id="exampleInputpassword1" aria-describedby="passwordhelp" name="ps" required >
+							    <div class="row pt-2 pb-5"></div>
+							    <button type="submit" class="btn btn-primary" id=b2>LOG IN</button>
+							      <a href="{% url 'forgotpass' %}" class="btn btn-warning">Forgot PAssword?</a>
+
+
+							  </div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

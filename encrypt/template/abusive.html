@@ -1,0 +1,40 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+<div class="container-fluid">
+  <div class="container me-5 p-5">
+		<div class="row pt-2"style="background: linear-gradient( to left, #000000 56%, #ffcc00 100%);border-radius: 20px;">
+			<div class="col-md-1"></div>
+
+				<div data-aos="fade-up" class="col-md-10  pt-5" align="center" >
+					<img src={%static "images/f2.jpg" %} width="40%" height="35%" style="border-radius: 20px;" class="me-3">
+					<h2 class="pt-2 text-warning" style="font-family:monospace; font-size:50px;">Cyberbully Detection</h2>
+					<div class="row pb-5">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+						<form method="POST" action="">
+					             {% csrf_token %}
+								<div data-aos="fade-down" class="form-group pt-2  mb-5">
+								    <label for="exampleFormControlTextarea14" class="text-warning">Input textarea</label>
+								    <textarea class="form-control text-warning"  rows="8" name="di" style="background:transparent;"></textarea>
+								    <button class="btn btn-warning mt-5 mb-5" type="submit">check</button>
+								  </div>
+							</form>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+
+			<div class="col-md-1"></div>
+		</div>	
+
+</div>
+</div>
+</body>
+
+
+
+
+{% endblock %}

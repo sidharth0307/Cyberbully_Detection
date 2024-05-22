@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{%static 'style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+	<style type="text/css">
+		.a1{color:white}
+    .a1:hover{color:yellow; !important;}
+
+		.a1::placeholder{color:white}
+		.b1:hover{ transform: skewX(-20deg); }
+		div1 {
+    background: linear-gradient(to left, #ffcc00 0%, #000000 55%);}
+	img{border-radius: 20px}
+	iframe{border-radius: 20px}
+	p1{
+	font-family:monospace;
+ font-size:40px;
+	}	
+
+	div2{width:1550px;
+	height:500px;
+	padding: 100px;
+	font-family:monospace;
+ font-size:40px;
+	}			
+	</style>
+</head>
+<body >
+<div class="container-fluid bg-dark text-light" style="background-image:url({%static 'images/b4.jpg'%}); background-size: fill;">
+	<div data-aos="fade-down" class="container">	
+		<div class="row pt-5 pb-5" align="center">
+				<p1 class="text-warning">Let's Talk us</p1>
+				<h1 id="r4">Reach out to our<br>
+					 cybersecurity experts</h1>
+					 <p id="r5">Please contact us through one of the channels below or use the contact form to send a
+					  direct message. We are committed to responding to every inquiry promptly and providing
+					   solutions tailored to your needs.</p>
+					   <div class="row">
+						   	<div class="col-md-5 pt-4">
+						   		<i class="icofont-pin icofont=2x tex-info bg-warning p-3 rounded-circle shadow"></i>
+						   		<h3 class="pt-5">Headquarters  </h3>
+								<p class="text-secondary">Majitha Road <br/>
+								Asr, Punjab, 143001</p>
+			   				</div>
+			   				<div class="col-md-2 pt-4"></div>
+							   	<div class="col-md-5 pt-4">
+							   		<i class="icofont-ui-clock icofont=2x tex-info bg-warning p-3 rounded-circle shadow"></i>
+			   						<h3 class="pt-5">Service hours </h3>
+									<p class="text-secondary">Monday - Friday  <br/>
+									8 am - 4 pm</p>
+		   						</div>
+		   					</div>
+		   					<div class="row">
+		   						<div class="col-md-5 pt-4">
+							   		<i class="icofont-ui-call icofont=2x tex-info bg-warning p-3 rounded-circle shadow"></i>
+							   		<h3 class="pt-5">Call center</h3>
+									<p class="text-secondary">+916239530147  </p>
+		   						</div>
+		   						<div class="col-md-2 pt-4">
+		   						</div>
+		   						<div class="col-md-5 pt-4">
+						   		<i class="icofont-ui-message icofont=2x tex-info bg-warning p-3 rounded-circle shadow"></i>
+						   		<h3 class="pt-5">Mailing</h3>
+								<p class="text-secondary">cybernyde1@gmail.com </p>
+		   						</div>
+		   					</div>
+						</div>
+					</div>
+				</div>
+
+
+			
+			<div class="container-fluid text-light">
+					<div1 class="row pt-5" >
+							<div data-aos="fade-left" class="col-md-6">
+								<img src={%static "images/p4.jpg" %} width="90%" height="90%">
+							</div>
+						<div class="col-md-6 "style="background-image:url({%static 'images/b3.jpg'%}); background-size: fill;">
+								<div data-aos="fade-right" class="container p-5 mb-5" >
+								<form method="POST" action="">
+												{% csrf_token %}
+								<p class="text-warning">Get in touch</p>
+								<h1 style="font-family:monospace; font-size:50px">We are ready to help</h1>		
+								<div class="container">	
+									
+										<div class="row pt-3 pb-3">
+											
+											  <label for="formGroupExampleInput" class="form-label text-warning">NAME</label>
+											  <input type="text" class="form-control border-0 border-bottom a1 text-white"style="background:transparent;" id="formGroupExampleInput" placeholder="" name="nm" required>
+											
+											
+											  <label for="formGroupExampleInput2" class="form-label text-warning mt-3">EMAIL</label>
+											  <input type="text" class="form-control border-0 border-bottom a1 text-white"style="background:transparent;" id="formGroupExampleInput2" placeholder="" name="em" required>
+											
+												
+												<div class="container">
+													<div class="row pt-3 pb-3">
+													<label for="formGroupExampleInput" class="form-label text-warning"> COMPANY NAME</label>
+												  	<input type="text" class="form-control border-0 border-bottom a1 text-white"style="background:transparent;" id="formGroupExampleInput" placeholder="" name="cnm" required>
+													</div>
+												</div>
+											</div>		
+													<div class="row pt-3 pb-3">
+													<label for="formGroupExampleInput" class="form-label text-warning">MESSAGE</label>	
+												  	<div class="form-floating">
+													  <textarea class="form-control border-0 border-bottom a1 text-white"style="background:transparent;" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required name="msg"></textarea>										  
+													</div>																						
+												</div>
+													  <div class="row  pt-3 pb-5">
+															  <div class="btn-group" role="group" aria-label="Basic example">
+				 											 <button type="submit" class="btn btn-warning">SEND MESSAGE</button>
+				 											</div>
+														</div>
+											
+											</form>
+										</div>
+									</div>
+
+								</div>
+							
+					</div1>
+				</div>
+				<div class="row">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212.25565736502307!2d74.9028908497217!3d31.6587432057325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919636999369cb7%3A0xaaea7863a98675d8!2s88%20Feet%20Rd%2C%20Amritsar%2C%20Punjab!5e0!3m2!1sen!2sin!4v1711133004559!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					
+				</div>
+
+		
+{% endblock %}

@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{%static 'icofont/icofont.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{%static 'css/aos.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style type="text/css">
+    .a1{color:white}
+    .a1:hover{color:yellow; !important;}
+    .active{
+      color: yellow;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-black pt-4 pb-4 border-0 border-bottom a1 sticky-top">
+      <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'homepage' %}"> 
+      <img class="ms-4" src={%static "images\icon.png" %} height="40%" width="70%" alt="" loading="lazy">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="nav nav-justify-content-center me-auto ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link  border-0 border-bottom a1 {% if request.path == '/' %}active{% endif %}"  href="{% url 'homepage' %}">HOME</a>
+        </li>
+         <li class="nav-item ms-4">
+            <a class="nav-link border-0 border-bottom a1 {% if request.path == '/aboutus' %}active{% endif %}" href="{% url 'aboutus' %}">ABOUT US</a>
+          </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link  border-0 border-bottom a1 {% if request.path == '/allcybersecuritylaws' %}active{% endif %}" aria-current="page" href="{% url 'allcybersecuritylaws' %}">Cyber Laws</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link  border-0 border-bottom a1 {% if request.path == '/alllaws' %}active{% endif %}" aria-current="page" href="{% url 'alllaws' %}">Laws</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link  border-0 border-bottom a1 {% if request.path == '/allterms' %}active{% endif %}" aria-current="page" href="{% url 'allterms' %}">Terms</a>
+        </li>
+        <li class="nav-item ms-4">
+          <a class="nav-link  border-0 border-bottom a1 {% if request.path == '/allfaq' %}active{% endif %}" aria-current="page" href="{% url 'allfaq' %}">FAQs</a>
+        </li>
+
+        <li class="nav-item ms-4">
+            <a class="nav-link border-0 border-bottom a1 {% if request.path == '/news' %}active{% endif %}" href="{% url 'news' %}">Cyber News</a>
+          </li>
+ 
+          <li class="nav-item ms-4">
+            <a class="nav-link border-0 border-bottom a1 {% if request.path == '/contactus' %}active{% endif %}" href="{% url 'contactus' %}">CONTACT US</a>
+          </li>
+
+         
+      </ul>
+    </div>
+  </div>
+  <a href="{% url 'login' %}" class="btn btn-warning">Login</a>
+  <a href="{% url 'registerform' %}" class="btn btn-warning ms-3 me-2">Register</a>
+
+  
+
+</ul></div></div></nav>
+{% block content %}
+{% endblock %}
+
+  <style type="text/css">
+    .a1::placeholder{color:white}
+  </style>
+  
+  <div class="container-fluid text-black pb-3" style="background: linear-gradient(to bottom, #000000 20%, #ffcc00 100%)">
+    <div class="container pt-5 pb-3">
+      <div class="row pt-5 pb-1" >
+        <div class="col-md-3"></div>
+        <div class="col-md-6" align="center">
+          <h1 class="pt-3" id="r2">Every website must be strong<br>
+           in the fortress of security</h1>
+          </div>
+        </div>
+        <div class="row" align="center">
+          <p>Only then can it stand resilient against the relentless tide of cyber threats</p>
+        </div>
+      </div>
+    </div> 
+
+  <div class="container-fluid bg-black text-light pb-5">
+    <div class=container>
+      <div class="row pt-5">
+        <div class="col-md-3">
+           <img  src={%static "images\logo.png" %} height="50%" width="80%">
+          <p>
+          Majitha Road<br>
+           Asr, Punjab, 143001
+          </p>
+        </div>
+        <div class="col-md-3 ">
+          <h5 class="ps-3 text-warning ">Services</h5>
+          <ul>
+            
+            <li >Speech</li>
+            <li >Language </li>
+            <li >Word Cloud</li>
+            <li >Linguistic Analysis </li>
+            <li >Sentiment Analysis </li>
+            <li >Cyberbully Detection </li>
+          </div>
+          <div class="col-md-3" align="left"> 
+            <h5 class="ps-3 text-warning ">Quick Links</h5>
+            <ul>
+              
+              <li>Contact Us  </li>
+              <li>Police Stations  </li>
+              <li>Cyber Laws  </li>
+              <li>Terms </li>
+              <li>Laws </li>
+              <li>FAQs  </li>
+             </ul>
+           </div>
+          
+        <div class="col-md-3" align="left"><h5 class="ps-3 text-warning ">contact info</h5>
+          <ul>
+            <li><h2>cybernyde1@gmail.com</h2></li>
+            <li><h2>+91 6239530147</h2></li>
+        </div>
+      </div>
+        
+</div>
+
+
+
+<script type="text/javascript" src="{% static 'js/aos.js' %}"></script>
+<script type="text/javascript">
+  AOS.init()
+</script>
+</body>
+</html>

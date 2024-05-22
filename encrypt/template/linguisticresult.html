@@ -1,0 +1,65 @@
+{% extends 'sidear1.html' %}
+{% block content %}
+{% load static %}
+
+<body style="background-image:url({%static 'images/b4.jpg'%}); background-size: cover;">
+<div class="container-fluid">
+  <div class="container me-5 p-5">
+
+        <div class="row pt-2"style="background: linear-gradient( to left, #000000 56%, #ffcc00 100%);border-radius: 20px;">
+            <div class="col-md-2"></div>
+
+                <div class="col-md-8" align="center" >
+                    <img src={%static "images/f13.jpg" %} width="50%" height="80%" style="border-radius: 20px;">
+                    <h2 class="pt-2 text-warning" style="font-family:monospace; font-size:50px;">Linguistic Analysis</h2>
+                </div>    
+                    <div class="row pb-5">
+                         <div class="col-md-1"></div>
+                         <div class="col-md-10">
+                             <div class="form-group pt-2  mb-5">
+                            <label for="exampleFormControlTextarea12"  class="text-white">Input Text</label>
+                             <textarea readonly class="form-control text-warning" for="exampleFormControlTextarea12"  rows="8" name="di" style="background:transparent;">{{data}}</textarea>
+                                <div class="row pt-5 pb-3">
+                                    <h1 class="text-white pb-3" align="center">Result</h1>
+                                     <div data-aos="fade-left" class="col-md-4"> 
+                                      <h3 class="text-warning">Part-of-speech tagging</h3>                      
+                                        {% for token in doc %}
+                                            <span class="text-white">{{token.text}}:{{token.pos_}}</span>
+                                            <br/>
+
+                                        {% endfor %}
+                                    </div>
+                                    <div data-aos="fade-up" class="col-md-4">
+                                         <h3 class="text-warning">Named Entity Recognition</h3>
+                                         {% for ent in doc.ents %}
+                                            <span class="text-white">{{ent.text}}:{{ent.label_}}</span>
+                                            <br/>
+
+                                        {% endfor %}
+                                    </div>
+                                    <div data-aos="fade-right" class="col-md-4">
+                                        <h3 class="text-warning">Dependency parsing</h3>
+                                        {% for token in doc %}
+                                            <span class="text-white">{{token.text}}:{{token.dep_}}-->{{token.head.text}}</span>
+                                            <br/>
+
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+               
+            <div class="col-md-2"></div>
+        </div>  
+</div>
+</div>
+</body>
+
+
+
+
+
+
+{% endblock %}

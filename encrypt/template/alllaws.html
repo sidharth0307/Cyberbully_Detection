@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<style type="text/css">
+  .table{background:!important}
+</style>
+
+<div class="container-fluid bg-dark text-light shadow pt-5 pb-5" style="background-image:url({%static 'images/b4.jpg' %}); background-size:contain;">
+  <div data-aos="zoom-in-up" class="row pb-5" align="center">
+  <i class="icofont-court icofont-10x text-warning"></i>
+  <h1 style="font-family:monospace; font-size:60px">Laws</h1>
+</div>
+<div data-aos="fade-down" class="container">
+	<div class="row">
+		
+		<table class=" table table-dark">
+  <thead style="background:transparent;">
+    <tr>
+      <th scope="col" style="color:yellow; font-family: monospace;">Section</th>
+      <th scope="col" style="color:yellow; font-family:monospace;">Offense</th>
+      <th scope="col" style="color:yellow; font-family:monospace;">Penalty</th>
+    </tr>
+  </thead>
+  {% for i in data %}
+  <tbody style="background:transparent;">
+    <tr class="p-4 border">
+      <td>{{i.sections}}</td>
+      <td>{{i.offence}}</td>
+      <td>{{i.penalty}}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+		
+	</div>
+</div>
+</div>
+
+
+{% endblock %}
